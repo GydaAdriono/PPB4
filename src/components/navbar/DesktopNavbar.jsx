@@ -5,6 +5,7 @@ export default function DesktopNavbar({ currentPage, onNavigate }) {
   const navItems = [
     { id: 'home', label: 'Beranda' },
     { id: 'makanan', label: 'Makanan' },
+    { id: 'favorit', label: 'Favorit' },
     { id: 'minuman', label: 'Minuman' },
     { id: 'profile', label: 'Profile' }
   ];

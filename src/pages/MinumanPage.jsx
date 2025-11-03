@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { ResepMinuman } from '../data/minuman';
 import RecipeGrid from '../components/minuman/RecipeGrid';
 
-export default function MinumanPage() {
+export default function MinumanPage({favorites, toggleFavorite}) {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredRecipes, setFilteredRecipes] = useState([]);
 
@@ -32,8 +32,7 @@ export default function MinumanPage() {
   
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-cyan-50 pb-20 md:pb-8">
       <main className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-12">
-       
-        <RecipeGrid recipes={filteredRecipes} />
+        <RecipeGrid recipes={filteredRecipes} favorites={favorites} toggleFavorite={toggleFavorite}/>
       </main>
     </div>
   );

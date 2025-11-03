@@ -5,7 +5,7 @@ import HeroSection from '../components/home/HeroSection';
 import FeaturedMakananSection from '../components/home/FeaturedMakananSection';
 import FeaturedMinumanSection from '../components/home/FeaturedMinumanSection';
 
-export default function HomePage() {
+export default function HomePage({favorites, toggleFavorite}) {
   const featuredMakanan = Object.values(ResepMakanan.resep).slice(0, 3);
   const featuredMinuman = Object.values(ResepMinuman.resep).slice(0, 2);
 
